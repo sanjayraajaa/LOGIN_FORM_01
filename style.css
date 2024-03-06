@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: url("blurcolor.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-form{
+    min-width: 300px;
+    min-height: 200px;
+    border: #c61f59 solid 3px;
+    border-radius: 10px;
+    backdrop-filter: blur(2px);
+}
+.logo img{
+    width: 150px;
+    margin-bottom: 20px;
+}
+.form-blog .form-txt{
+    padding: 0;
+    width: 350px;
+    height: 50px;
+    margin-bottom: 20px;
+    outline: none;
+    background: transparent;
+    border: none;
+    border-bottom: #c61f59 solid 3px;
+    color: #c61f59;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.form-blog{
+    position: relative;
+    z-index: 1;
+}
+.form-blog .form-label{
+    position: absolute;
+    top: 15px;
+    left: 0;
+    color: #c61f59;
+    font-size: 18px;
+    z-index: -1;
+}
+.main-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+.form-txt:focus+ .form-label{
+    top: -10px;
+    transition: 0.5s;
+    color: #db5b88;
+}
+.form-txt:not(:focus):valid+label{
+    top: -10px;
+    z-index: 10;
+    transition: 0.5s;
+    color: #db5b88;
+}
+.form-check{
+    align-self: flex-start;
+}
+.form-check label{
+    color: #c61f59;
+}
+.form-btn button{
+    margin: 20px;
+    padding: 12px;
+    background: transparent;
+    border: 3px #c61f59 solid;
+    border-radius: 15px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #c61f59;
+    cursor: pointer;
+}
+
+@media (max-width: 412px) {
+    .login-form{
+        width: 200px;
+    }
+    .form-blog .form-txt {
+        width: 200px;
+        font-size: 15px;
+    }
+    .form-blog .form-label{
+        font-size: 15px;
+        top: 25px;
+    }
+    .form-btn button{
+        font-size: 15px;
+    }
+}
